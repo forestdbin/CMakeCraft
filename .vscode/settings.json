@@ -1,0 +1,7 @@
+{
+    "cmake.buildDirectory": "${workspaceFolder}/out_${buildType}",
+    "cmake.configureSettings": {
+        "CMAKE_VERBOSE_MAKEFILE": false,
+    },
+    "cmake.generator": "Unix Makefiles",
+}
