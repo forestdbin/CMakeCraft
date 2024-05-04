@@ -1,0 +1,4 @@
+out_*
+
+ext/sources
+ext/googletest
