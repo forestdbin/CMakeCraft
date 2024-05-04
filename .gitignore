@@ -2,3 +2,4 @@ out_*
 
 ext/sources
 ext/googletest
+ext/json

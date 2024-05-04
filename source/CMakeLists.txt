@@ -1,3 +1,9 @@
+find_package(
+    nlohmann_json
+    REQUIRED ALL
+    PATHS ~/git/CMakeCraft/ext/json/share/cmake
+)
+
 add_subdirectory(greet)
 
 add_executable(
@@ -7,5 +13,6 @@ add_executable(
 
 target_link_libraries(
     foo
-    greet
+    PRIVATE greet
+    PRIVATE nlohmann_json::nlohmann_json
 )
