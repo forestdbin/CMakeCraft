@@ -1,4 +1,6 @@
-out_*
+out_*/
+
+ext/download/
 
 ext/sources
 ext/googletest
