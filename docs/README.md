@@ -35,3 +35,15 @@ wget https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-
 
 wget https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-21.1.8-Linux-ARM64.tar.xz
 ```
+
+## Toolchain file
+
+```bash
+cmake -S . -B out -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-gcc-x86_64.cmake
+
+LD_LIBRARY_PATH=/usr/aarch64-linux-gnu/lib /usr/aarch64-linux-gnu/lib/ld-linux-aarch64.so.1 out/foo
+QEMU_LD_PREFIX=/usr/aarch64-linux-gnu out/foo
+
+# cmake version 4.2.3
+cmake -S . -B out --toolchain cmake/toolchain-gcc-x86_64.cmake
+```
