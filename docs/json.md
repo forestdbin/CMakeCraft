@@ -1,11 +1,12 @@
 # nlohmann json
 
-```
-cd ext/sources
+```bash
+cd ext/source
 git clone https://github.com/nlohmann/json.git
 cd json
-git checkout -b v3.11.3 v3.11.3
+git checkout v3.12.0
 
-cmake -S . -B out -DCMAKE_INSTALL_PREFIX=~/git/CMakeCraft/ext/json -DJSON_BuildTests=OFF -DJSON_MultipleHeaders=OFF
-cmake --build out -t install
+cmake -S . -B out -DJSON_BuildTests=OFF -DJSON_MultipleHeaders=OFF
+cmake --build out
+cmake --install out --prefix ../../json
 ```
