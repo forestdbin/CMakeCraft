@@ -41,7 +41,7 @@ wget https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-
 sudo apt-get install ninja-build
 ```
 
-## Toolchain file
+# Toolchain file
 
 ```bash
 cmake -S . -B out -DCMAKE_TOOLCHAIN_FILE=cmake/toolchain-gcc-x86_64.cmake
@@ -53,13 +53,50 @@ QEMU_LD_PREFIX=/usr/aarch64-linux-gnu out/foo
 cmake -S . -B out --toolchain cmake/toolchain-gcc-x86_64.cmake
 ```
 
-## Preset
+# Preset
 
 ```bash
+# cmake version 4.2.3
 cmake --list-presets
 cmake --list-presets configure
 cmake --list-presets build
 
 cmake --preset default
 cmake --build --preset default
+```
+
+# Dependency
+
+## find_package()
+```
+set(FOO_ROOT "path containing lib/cmake/Foo") # or FOO_DIR
+find_package(Foo REQUIRED) # or in ${CMAKE_PREFIX_PATH}
+```
+
+### Search config mode
+```
+FooConfig.cmake
+foo-config.cmake
+FooConfigVersion.cmake
+foo-config-version.cmake
+```
+
+### Search module mode
+```
+FindFoo.cmake # in ${CMKAE_MODULE_PATH}
+```
+
+### Imported Targets
+
+## include(FetchContent)
+```
+FetchContent_Declare()
+FetchContent_MakeAvailable()
+```
+
+## include(FindPkgConfig)
+```
+pkg_check_modules()
+pkg_search_module()
+pkg_get_variable()
 ```
