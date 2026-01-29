@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "my",
+            "inherits": "default",
+            "generator": "Unix Makefiles",
+            "binaryDir": "${sourceDir}/out"
+        }
+    ]
+}

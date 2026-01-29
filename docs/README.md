@@ -36,6 +36,11 @@ wget https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-
 wget https://github.com/llvm/llvm-project/releases/download/llvmorg-21.1.8/LLVM-21.1.8-Linux-ARM64.tar.xz
 ```
 
+### ninja
+```bash
+sudo apt-get install ninja-build
+```
+
 ## Toolchain file
 
 ```bash
@@ -46,4 +51,15 @@ QEMU_LD_PREFIX=/usr/aarch64-linux-gnu out/foo
 
 # cmake version 4.2.3
 cmake -S . -B out --toolchain cmake/toolchain-gcc-x86_64.cmake
+```
+
+## Preset
+
+```bash
+cmake --list-presets
+cmake --list-presets configure
+cmake --list-presets build
+
+cmake --preset default
+cmake --build --preset default
 ```
