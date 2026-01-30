@@ -69,7 +69,7 @@ cmake --build --preset default
 
 ## find_package()
 ```
-set(FOO_ROOT "path containing lib/cmake/Foo") # or FOO_DIR
+set(FOO_ROOT "path containing lib/cmake/Foo") # or Foo_DIR, Foo_ROOT
 find_package(Foo REQUIRED) # or in ${CMAKE_PREFIX_PATH}
 ```
 

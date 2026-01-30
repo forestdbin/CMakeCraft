@@ -1,13 +1,17 @@
+# set(nlohmann_json_DIR ${CMAKE_SOURCE_DIR}/ext/json/share/cmake/nlohmann_json)
+# set(nlohmann_json_ROOT ${CMAKE_SOURCE_DIR}/ext/json)
 find_package(
     nlohmann_json
-    REQUIRED ALL
-    PATHS ~/git/CMakeCraft/ext/json/share/cmake
+    REQUIRED
+    PATHS ${CMAKE_SOURCE_DIR}/ext/json
 )
 
+# set(Boost_DIR ${CMAKE_SOURCE_DIR}/ext/boost/lib/cmake/Boost-1.90.0)
+# set(Boost_ROOT ${CMAKE_SOURCE_DIR}/ext/boost)
 find_package(
     Boost
     REQUIRED ALL
-    PATHS ~/git/CMakeCraft/ext/boost/lib/cmake
+    PATHS ${CMAKE_SOURCE_DIR}/ext/boost
 )
 
 add_subdirectory(greet)

@@ -1,5 +1,9 @@
-set(GTest_DIR ~/git/CMakeCraft/ext/googletest/lib/cmake/GTest)
-find_package(GTest)
+# set(GTest_DIR ${CMAKE_SOURCE_DIR}/ext/googletest/lib/cmake/GTest)
+# set(GTEST_ROOT ${CMAKE_SOURCE_DIR}/ext/googletest)
+# set(GTest_ROOT ${CMAKE_SOURCE_DIR}/ext/googletest)
+find_package(GTest REQUIRED
+    PATHS ${CMAKE_SOURCE_DIR}/ext/googletest
+)
 
 add_executable(
     main_test
